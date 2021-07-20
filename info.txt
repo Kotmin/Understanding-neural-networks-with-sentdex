@@ -1,3 +1,8 @@
 Just learning ml from this guy:
 
 https://www.youtube.com/watch?v=Wo5dMEP_BbI&ab_channel=sentdex
+
+Check netlify - for kinda tdd git tests (i really should read about it[not only the soft about tests])
+
+Github quick tutorials:
+https://www.youtube.com/playlist?list=PLpPVLI0A0OkLBWbcctmGxxF6VHWSQw1hi
