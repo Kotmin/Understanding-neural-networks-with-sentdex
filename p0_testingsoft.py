@@ -1,7 +1,7 @@
 import sys
 import numpy as np
 import matplotlib
-#me neither
+
 
 
 print("Python: ", sys.version)
