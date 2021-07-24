@@ -17,5 +17,7 @@ weights2 = [[0.1,-0.14,0.5],
 biases2 = [-1,2,-0.5]
 
 
-output = np.dot(inputs, np.array(weights).T) + biases #we're changeing a list of the lists to an np object called array, and using T method(transpose)
-print(output)
+layer1_outputs = np.dot(inputs, np.array(weights).T) + biases #we're changeing a list of the lists to an np object called array, and using T method(transpose)
+#print(outputs)
+layer2_outputs = np.dot(layer1_outputs, np.array(weights2).T) + biases2
+print(layer2_outputs)
