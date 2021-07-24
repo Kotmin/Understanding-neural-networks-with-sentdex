@@ -21,4 +21,6 @@ layer2 = Layer_Dense(5,2) #l1 is trze input soo we have to set f_a to 5
 
 layer1.forward(X) #
 
-print(layer1.output)
+#print(layer1.output)
+layer2.forward(layer1.output)
+print(layer2.output)
