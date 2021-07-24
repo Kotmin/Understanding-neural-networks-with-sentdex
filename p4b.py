@@ -6,7 +6,9 @@ X = [ [1, 2 ,3 ,2.5],
 
 
 class Layer_Dense:
-    def __init__(self):
-        pass
+    def __init__(self, n_inputs, n_neurons):
+        self.weights = 0.10 * np.random.randn(n_inputs,n_neurons)
+        self.biases = np.zeros(1,n_neurons) #both function return a matrix of shape (first_arg,sec_arg)
+        
     def forward(self):
         pass
