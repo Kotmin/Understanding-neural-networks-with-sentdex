@@ -19,6 +19,7 @@ import matplotlib.pyplot as plt
 
 print("here")
 X,y = create_data(100, 3)
+#How much of egzample, number of sets
 
 plt.scatter(X[:,0],X[:,1])
 plt.show()
