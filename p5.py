@@ -1,8 +1,15 @@
 import numpy as np
+import nnfs
+
+
 #REMINDER
 #pip uninstall nnfs
 #!!!!!!!!!
-np.random.seed(0)
+
+nnfs.init()
+#np.random.seed(0)
+#We have to uncomment upper line while we delete nnfs
+
 #X == inputs
 X = [ [1, 2 ,3 ,2.5],
     [2.0,5.0,-1.0,2.0],

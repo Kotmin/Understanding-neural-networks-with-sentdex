@@ -8,3 +8,9 @@ Github quick tutorials:
 https://www.youtube.com/playlist?list=PLpPVLI0A0OkLBWbcctmGxxF6VHWSQw1hi
 
 
+Check your wisedom here:
+https://cs231n.github.io/
+
+
+https://cs231n.github.io/neural-networks-case-study/
+
