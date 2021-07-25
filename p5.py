@@ -1,5 +1,7 @@
 import numpy as np
-
+#REMINDER
+#pip uninstall nnfs
+#!!!!!!!!!
 np.random.seed(0)
 #X == inputs
 X = [ [1, 2 ,3 ,2.5],
