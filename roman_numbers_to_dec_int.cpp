@@ -1,6 +1,7 @@
 #include<string>
 #include<iostream>
 
+int val(char s);
 int romanToInt(std::string s) {   
     int sol=0;
     int len = s.length();
@@ -9,7 +10,7 @@ int romanToInt(std::string s) {
         return 0;
     if(len ==1)
         return val(s[0]);
-    
+    sol=val(s[len-1]);
     for(int i=len;i>=2;i--)
     {
         int act = val(s[i-1]);
@@ -17,12 +18,14 @@ int romanToInt(std::string s) {
             
         if(act>prev)
         {
-           sol=sol+(act-prev);  
+           sol=sol-prev;  
          }
          if(act<=prev)
         {
-            sol=sol+(act+prev); 
+            sol=sol+prev; 
         }
+        
+        
         
     }
     
@@ -52,7 +55,9 @@ int val(char s)
 
 main()
 {
+    std::string input="MCMXCIV";
     std::cout<<"Works\n";
-    std::cout<<val('D');
+    //std::cout<<val('D');
+    std::cout<<romanToInt(input);
     return 0;
 }
