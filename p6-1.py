@@ -16,4 +16,6 @@ norm_values = []
 
 for value in exp_values:
     norm_values.append( value / norm_base)
-    
+
+print(norm_values)
+print(sum(norm_values))
