@@ -28,12 +28,27 @@ class Activation_Softmax:
 
 
 
-layer1 = Layer_Dense(2,5)
+X, y = spiral_data(samples=100, classes=3)
+
+dense1 = Layer_Dense(2,3) #2 musi byc bo jest x,y
 
 activation1 = Activation_ReLU()
 
+dense2 = Layer_Dense(3,3)
+#pierwsza 3ka po z poprzedniego wyjscia dostaniemy 3 wejscia
+#druga w sumie znowu moglaby byc czymkolwiek
+#ale powinniśmy potraktowac drugi argument jako pytanie ile danych na wyjsciu powinna miec ta warstwa
+# a konkretniej ile neuronów powinna mieć 3 klasy 3 neurony w tym przypadku
 
-layer1.forward(X)
+activation2 = Activation_Softmax()
 
-activation1.forward(layer1.output)
-print(activation1.output)
+dense1.forward(X)
+activation1.forward(dense1.output)
+
+dense2.forward(activation1.output)
+activation2.forward(dense2.output)
+
+print(activation2.output[:5]) #we get batch of 300 samples
+#but printing only first 5.
+
+#czysty model powinien zwracac nam rowne szanse
