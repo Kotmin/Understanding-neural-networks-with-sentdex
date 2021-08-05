@@ -11,11 +11,11 @@ layer_outputs = [[4.8, 1.21,2.385],
 
 exp_values = np.exp(layer_outputs)
 
-print(np.sum(layer_outputs, axis=1,keepdims=True))#suma wierszy; 0 byłoby sumą kolumn, a bez arg/arg=None byłby to zwykly skalar
+#print(np.sum(layer_outputs, axis=1,keepdims=True))#suma wierszy; 0 byłoby sumą kolumn, a bez arg/arg=None byłby to zwykly skalar
 
 #keepdims makes matrix the same dimentions as input matrix
 
-# norm_values = exp_values / np.sum(exp_values)
+norm_values = exp_values / np.sum(exp_values,axis=1,keepdims=True)
 
-# print(norm_values)
+print(norm_values) #now we have normalised values
 # print(sum(norm_values))
