@@ -5,8 +5,8 @@ from nnfs.datasets import spiral_data
 nnfs.init()
 
 
-
-
+#this was p6-2.py oryginally i should check it again
+# results from p6 matches with mine dunno what happened
 class Layer_Dense:
     def __init__(self, n_inputs, n_neurons):
         self.weights = 0.10 * np.random.randn(n_inputs,n_neurons)
@@ -69,3 +69,8 @@ print(activation2.output[:5]) #we get batch of 300 samples
 #but printing only first 5.
 
 #czysty model powinien zwracac nam rowne szanse
+
+loss_function = Loss_CategoricalCrossentropy()
+loss = loss_function.calculate(activation2.output, y )#we pass predictions vs targets
+
+print("Loss: ", loss)
