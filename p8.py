@@ -40,7 +40,10 @@ class Loss_CategoricalCrossentropy(Loss): #inhare from/with Loss read more about
             correct_confidences= y_pred_clipped[range(samples),y_true]
         if len(y_true.shape) == 2:
             correct_confidences = np.sum(y_pred_clipped*y_true,axis=1)
-            
+        
+        negative_log_likelihoods = -np.log(correct_confidences)
+        return negative_log_likelihoods
+
 
 X, y = spiral_data(samples=100, classes=3)
 
